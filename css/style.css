@@ -1,0 +1,425 @@
+:root{
+	--color-primary: #6aeeb5;
+	--color-primary-hover: #29e6a7;
+	--color-gray100: #f0f7f8;
+	--color-gray200: #cfd8dc;
+}
+
+/*?import font */
+@font-face {
+	font-family: 'Poppins Regular';
+	src: url('/assets/font/Poppins-Regular.ttf');
+}
+
+body {
+	font-family: 'Poppins Regular', monospace;
+	background-color: var(--color-gray100);
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* overflow-x: hidden; */
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* btn class */
+.btn__primary {
+	font-family: 'Poppins Regular', monospace;
+	font-size: 1rem;
+	background: var(--color-primary);
+	border: none;
+	outline: none;
+	border-radius: 0.2rem;
+	padding: 0.5rem 1rem;
+	cursor:pointer;
+	transition: all 200ms ease-in;
+}
+
+.btn__primary:hover {
+	background: var(--color-primary-hover);
+}
+
+/* ==> css for main*/
+main {
+	display: flex;
+	height: calc(100vh - 100px);
+	align-items: center;
+	justify-content: center;
+}
+
+main h2 {
+	font-size: 25px;
+	margin-bottom: 1.2rem;
+	text-transform: uppercase;
+}
+ 
+.hero__img {
+	width: 670px;
+	max-width: 100%;
+}
+
+.content__left {
+	width: 30%;
+}
+
+.hero__content {
+	margin-bottom: 2.1rem;
+	line-height: 22px;
+}
+
+/*  ==> about */
+.about {
+	box-sizing: border-box;
+	margin: 20px auto;
+	padding-top: 3.2rem;
+	width: 80%;
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 1fr 1fr;
+}
+
+.about__img {
+	grid-area: 1fr;
+	max-width: 470px;
+	width: 100%;
+}
+
+.content__about {
+	grid-area: 1fr;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.content__about h3 {
+	padding-top: 1rem;
+	margin-bottom: 1.2rem;
+	box-sizing: border-box;
+}
+
+.content__about p {
+	font-size: 15px;
+	opacity: 0.7;
+	margin-bottom: 1.7rem;
+}
+
+.about img{
+	width: 600px;
+}
+
+/* ==> jenis-jenis vac */
+.container__vaccine {
+	max-width: 80%;
+	margin: 30px auto;
+	padding: 5px 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-around;
+	align-items: stretch;
+}
+
+.title__content {
+	box-sizing: border-box;
+	padding-top: 7rem;
+	margin: 30px auto;
+	text-align: center;
+}
+
+.container__vaccine div {
+	width: 25%;
+	padding: 20px;
+	box-sizing: border-box;
+	background-color: #ffff;
+	box-shadow: 0px 0px 10px var(--color-gray200);
+	border-radius: 0.4rem;
+} 
+
+.title__card {
+	display: flex;
+	align-items: center;
+}
+
+.content {
+	margin-top: 1rem;
+	opacity: 0.7;
+}
+
+.title__card h3 {
+	padding-left: 0.5rem;
+}
+
+
+.content__vaccine {
+	display: block;
+}
+
+
+
+/* ==> persiapan */
+.persiapan {
+	display: grid;
+	grid-template-areas:"left right";
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	width: 80%;
+	padding-top: 2.4rem;
+	box-sizing: border-box;
+	margin: 20px auto;
+	height: 70vh;
+}
+
+.persiapan__kiri {
+	grid-area: 1fr;
+}
+
+.persiapan__kiri img {
+	width: 470px;
+}
+
+.persiapan__kanan {
+	grid-area: right;
+	padding-left: 3rem;
+	padding-bottom: 20px;
+	box-sizing: border-box;
+}
+
+.list__persiapan {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+}
+.list__persiapan span {
+	padding-left: 5px;
+	font-size: 15px;
+	font-weight: bold;
+	margin-bottom: 1rem;
+	box-sizing: border-box;
+}
+
+.list__persiapan p {
+	margin-top: -10px;
+	font-size: 13px;
+	opacity: 0.7;
+}
+
+.persiapan__kanan img {
+	width: 23px;
+	margin-bottom: 15px;
+	box-sizing: border-box;
+}
+
+/* contact vaccine */
+.contact {
+	display: flex;
+	max-width: 800px;
+	margin: 10px auto;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	padding: 25px 30px;
+}
+
+.contact .title {
+	font-size: 25px;
+	font-weight: bold;
+	position: relative;
+}
+
+.contact .title::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 3px;
+	width: 30px;
+	background: var(--color-primary);
+}
+
+.contact form .user_details{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 20px 0 12px 0;
+}
+
+form .user_details .input_box {
+	margin-bottom: 15px;
+	width: calc(100% / 2 - 20px);
+}
+
+.user_details .input_box input {
+	height: 45px;
+	width: 100%;
+	outline: none;
+	border-radius: 0.2rem;
+	border: 1px solid #ccc;
+	padding-left: 15px;
+	font-size: 16px;
+	background-color: transparent;
+	border-bottom-width: 2px;
+	transition: all 0.3s ease;
+}
+
+.user_details .input_box .details {
+	display: block;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+
+.user_details .input_box input:focus,
+.user_details .input_box input:valid {
+	border-color: var(--color-primary-hover);
+}
+
+form .jenis_kelamin .title_jeniskelamin {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+form .jenis_kelamin .kategori {
+	display: flex;
+	width: 80%;
+	margin: 14px 0;
+	justify-content: space-between;
+}
+
+.jenis_kelamin .kategori label {
+	display: flex;
+	align-items: center;
+}
+
+.jenis_kelamin .kategori .dot {
+	height: 18px;
+	width: 18px;
+	border-radius: 50%;
+	background: #d9d9d9;
+	margin-right: 10px;
+	border: 5px solid transparent;
+	transition: all 0.3 ease-in;
+}
+
+
+#dot-1:checked
+ ~ .kategori label .one,
+ #dot-2:checked
+ ~ .kategori label .two,
+ #dot-3:checked
+ ~ .kategori label .three {
+	border-color: #d9d9d9;
+	background: var(--color-primary-hover);
+ }
+
+ form input[type="radio"] {
+	 display: none;
+ }
+
+ form .button {
+	height: 45px;
+	margin: 45px 0;
+	padding-left: 20px;
+ }
+
+ form .button input {
+	height: 100%;
+	width: 100%;
+	outline: none;
+	border: none;
+	font-family: 'Poppins Regular', monospace;
+	font-size: 18px;
+	letter-spacing: 1px;
+	font-weight: 600;
+	opacity: 0.9;
+	background: var(--color-primary);
+	border-radius: 0.4rem;
+ }
+
+ 
+ /* footer */
+.footer {
+	padding: 40px 0;
+	background-color: white;
+	box-shadow: var(--color-gray100);
+}
+
+.footer .social {
+	text-align: center;
+	padding-bottom: 25px;
+	color: black;
+}
+
+.footer .social a {
+	font-size: 24px;
+	color: inherit;
+	border: 1px solid #ccc;
+	width: 40px;
+	height: 40px;
+	line-height: 38px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 50%;
+	margin: 0 8px;
+	opacity: 0.75;
+}
+
+.footer .social a:hover{
+	opacity: 0.9;
+}
+
+.footer ul {
+	margin-top: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 18px;
+	line-height: 1.6;
+	margin-bottom: 0;
+	text-align: center; 
+}
+
+.footer ul li a {
+	color: black;
+	text-decoration: none;
+	opacity: 0.8;
+
+}
+
+.footer ul li {
+	display: inline-block;
+	padding: 0 15px;
+	
+}
+
+.footer ul li:hover {
+	opacity: 1;
+}
+
+
+.footer .copyright {
+	margin-top: 15px;
+	text-align: center;
+	font-size: 13px;
+	color: black;
+}
+ 
+ 
+.card_one:hover {
+	transition:all 0.3s ease-in;
+	background-color: var(--color-primary-hover);
+}
+
+.card_two:hover {
+	transition:all 0.3s ease-in;
+	background-color: var(--color-primary-hover);
+}
+
+.card_three:hover {
+	transition:all 0.3s ease-in;
+	background-color: var(--color-primary-hover);
+}
+
+.card_four:hover {
+	transition:all 0.3s ease-in;
+	background-color: var(--color-primary-hover);
+}
